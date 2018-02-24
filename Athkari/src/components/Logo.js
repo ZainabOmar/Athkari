@@ -1,31 +1,17 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  StatusBar,
   Text,
   View,
   Image,
 } from 'react-native';
 
-import Logo from './src/components/Logo';
-
-type Props = {};
-export default class App extends Component<props> {
+export default class Logo extends Component<> {
   render() {
     return(
       <View style={styles.container}>
-      <StatusBar
-      backgroundColor='#321911'
-      barStyle='light-content'
-      />
-      <Logo />
+     <Image source={require('../../assets/logo.png')}/>
       </View>
       )
   }
