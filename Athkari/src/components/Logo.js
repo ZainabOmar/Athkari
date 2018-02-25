@@ -11,7 +11,7 @@ export default class Logo extends Component<> {
   render() {
     return (
       <View style={styles.container}>
-     <Image source={logo} />
+     <Image source={logo} style={{ width: 120, height: 120 }} />
       </View>
     );
   }
@@ -19,9 +19,7 @@ export default class Logo extends Component<> {
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#d7ccc8',
   }
 });

@@ -1,21 +1,13 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   StyleSheet,
   StatusBar,
   View,
+  Text,
 } from 'react-native';
 
-import Logo from './src/components/Logo';
-import Athkar from './src/components/Athkar';
-
 type Props = {};
-export default class App extends Component<Props> {
+export default class Masaa extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
@@ -23,8 +15,7 @@ export default class App extends Component<Props> {
       backgroundColor='#321911'
       barStyle='light-content'
       />
-      <Logo />
-      <Athkar />
+    <Text style={styles.header}>أذكار المساء</Text>
       </View>
     );
   }
@@ -32,9 +23,17 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#d7ccc8',
+  },
+  header: {
+    fontSize: 30,
+    fontWeight: '500',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#8c7b75',
+    padding: 20,
+    marginBottom: 20
   }
 });

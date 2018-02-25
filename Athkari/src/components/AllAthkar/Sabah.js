@@ -3,10 +3,11 @@ import {
   StyleSheet,
   StatusBar,
   View,
+  Text,
 } from 'react-native';
 
 type Props = {};
-export default class Header extends Component<Props> {
+export default class Sabah extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
@@ -14,6 +15,7 @@ export default class Header extends Component<Props> {
       backgroundColor='#321911'
       barStyle='light-content'
       />
+    <Text style={styles.header}>أذكار الصباح</Text>
       </View>
     );
   }
@@ -21,9 +23,17 @@ export default class Header extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#d7ccc8',
+  },
+  header: {
+    fontSize: 30,
+    fontWeight: '500',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#8c7b75',
+    padding: 20,
+    marginBottom: 20
   }
 });
