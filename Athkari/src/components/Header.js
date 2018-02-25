@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
+  StatusBar,
   View,
-  Image,
 } from 'react-native';
 
-const logo = require('../../assets/logo.png');
-
-export default class Logo extends Component<> {
+type Props = {};
+export default class Header extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-     <Image source={logo} />
+      <StatusBar
+      backgroundColor='#321911'
+      barStyle='light-content'
+      />
       </View>
     );
   }

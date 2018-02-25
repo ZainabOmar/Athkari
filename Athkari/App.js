@@ -6,20 +6,17 @@
 
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
   StatusBar,
-  Text,
   View,
-  Image,
 } from 'react-native';
 
 import Logo from './src/components/Logo';
 
 type Props = {};
-export default class App extends Component<props> {
+export default class App extends Component<Props> {
   render() {
-    return(
+    return (
       <View style={styles.container}>
       <StatusBar
       backgroundColor='#321911'
@@ -27,7 +24,7 @@ export default class App extends Component<props> {
       />
       <Logo />
       </View>
-      )
+    );
   }
 }
 
@@ -38,5 +35,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#d7ccc8',
   }
-})
-
+});
