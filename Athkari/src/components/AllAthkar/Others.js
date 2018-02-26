@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 
 type Props = {};
-export default class Masaa extends Component<Props> {
+export default class Others extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
@@ -15,7 +15,7 @@ export default class Masaa extends Component<Props> {
       backgroundColor='#321911'
       barStyle='light-content'
       />
-    <Text style={styles.header}>أذكار المساء</Text>
+    <Text style={styles.header}>أخرى</Text>
       </View>
     );
   }
@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#d7ccc8',
-    borderRadius: 15,
   },
   header: {
     fontSize: 30,
