@@ -56,9 +56,10 @@ const styles = StyleSheet.create({
     width: 200,
     paddingVertical: 13,
     backgroundColor: '#d7ccc8',
+    marginBottom: 20,
   },
   buttonText: {
-    color: '#8c7b75',
+    color: '#321911',
     fontSize: 30,
     textAlign: 'center',
     fontWeight: '500',

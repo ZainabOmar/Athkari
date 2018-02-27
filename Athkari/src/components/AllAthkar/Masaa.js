@@ -10,7 +10,7 @@ type Props = {};
 export default class Masaa extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
+      <View>
       <StatusBar
       backgroundColor='#321911'
       barStyle='light-content'
@@ -22,12 +22,6 @@ export default class Masaa extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#d7ccc8',
-    borderRadius: 15,
-  },
   header: {
     fontSize: 30,
     fontWeight: '500',

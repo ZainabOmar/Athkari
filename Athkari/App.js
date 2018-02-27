@@ -11,6 +11,7 @@ import {
   View,
 } from 'react-native';
 
+import Header from './src/components/Header';
 import Logo from './src/components/Logo';
 import Athkar from './src/components/Athkar';
 
@@ -23,6 +24,7 @@ export default class App extends Component<Props> {
       backgroundColor='#321911'
       barStyle='light-content'
       />
+      <Header />
       <Logo />
       <Athkar />
       </View>
@@ -32,9 +34,6 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: '#d7ccc8',
   }
 });
