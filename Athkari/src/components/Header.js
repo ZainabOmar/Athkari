@@ -9,7 +9,7 @@ export default class Header extends Component<> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.textStyle}>Athkari</Text>
+      <Text style={styles.textStyle}>Athkari</Text>
       </View>
     );
   }

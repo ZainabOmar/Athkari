@@ -5,17 +5,27 @@ import {
   View,
   Text,
 } from 'react-native';
+// import { fetch } from 'isomorphic-fetch';
+
+const data = require('../../../data/Sabah.json');
 
 type Props = {};
 export default class Sabah extends Component<Props> {
+  state = { myData: [] };
+
+  componentWillMount() {
+    this.setState({ myData: data });
+  }
+
   render() {
+    console.log('here is the data', this.state);
     return (
       <View>
-      <StatusBar
-      backgroundColor='#321911'
-      barStyle='light-content'
-      />
-    <Text style={styles.header}>أذكار الصباح</Text>
+        <StatusBar
+          backgroundColor='#321911'
+          barStyle='light-content'
+        />
+        <Text style={styles.header}>أذكار الصباح</Text>
       </View>
     );
   }

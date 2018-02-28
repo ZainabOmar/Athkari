@@ -21,14 +21,14 @@ export default class Athkar extends Component<Props> {
       barStyle='light-content'
       />
       <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}> أذكار الصباح </Text>
+      <Text style={styles.buttonText}> أذكار الصباح </Text>
       </TouchableOpacity>
-    <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}> أذكار المساء </Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}> أخرى </Text>
-    </TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
+      <Text style={styles.buttonText}> أذكار المساء </Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
+      <Text style={styles.buttonText}> أخرى </Text>
+      </TouchableOpacity>
       </View>
     );
   }
