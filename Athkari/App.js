@@ -16,7 +16,8 @@ import {
 // import Logo from './src/components/Logo';
 // import Athkar from './src/components/Athkar';
 
-import Sabah from './src/components/AllAthkar/Sabah';
+// import Sabah from './src/components/AllAthkar/Sabah';
+import Masaa from './src/components/AllAthkar/Masaa';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -28,7 +29,7 @@ export default class App extends Component<Props> {
           backgroundColor='#321911'
           barStyle='light-content'
         />
-      <Sabah />
+      <Masaa />
       </View>
     );
   }

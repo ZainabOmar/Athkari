@@ -25,7 +25,7 @@ export default class Sabah extends Component<Props> {
           <Text key={thikr.id} style={styles.text}>
             {thikr.title}
             {'\n'}{'\n'}
-            ({thikr.count})
+            ({thikr.times})
           </Text>
       </Card>
     );
