@@ -5,7 +5,8 @@ import {
   View,
   Text,
 } from 'react-native';
-// import { fetch } from 'isomorphic-fetch';
+
+import Card from '../Card';
 
 const data = require('../../../data/Sabah.json');
 
@@ -20,12 +21,13 @@ export default class Sabah extends Component<Props> {
   renderAthkar() {
     return this.state.myData.map(
       thikr =>
-      <View>
+      <Card>
           <Text key={thikr.id} style={styles.text}>
             {thikr.title}
+            {'\n'}{'\n'}
             ({thikr.count})
           </Text>
-      </View>
+      </Card>
     );
   }
 
@@ -48,11 +50,10 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 30,
     fontWeight: '500',
-    alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: '#8c7b75',
-    padding: 20,
-    marginBottom: 20
+    padding: 15,
+    color: 'black',
+    textAlign: 'center'
   },
   text: {
     fontSize: 20,
