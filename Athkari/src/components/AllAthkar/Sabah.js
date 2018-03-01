@@ -4,7 +4,6 @@ import {
   StatusBar,
   View,
   Text,
-  TouchableOpacity,
 } from 'react-native';
 // import { fetch } from 'isomorphic-fetch';
 
@@ -22,15 +21,10 @@ export default class Sabah extends Component<Props> {
     return this.state.myData.map(
       thikr =>
       <View>
-        <View style={{ alignItems: 'flex-end', }}>
-          <TouchableOpacity style={styles.button}>
-            <Text key={thikr.count} style={styles.buttonText}>{thikr.count}</Text>
-          </TouchableOpacity>
-          <Text key={thikr.title} style={styles.text}>
+          <Text key={thikr.id} style={styles.text}>
             {thikr.title}
-            {'\n'}
+            ({thikr.count})
           </Text>
-        </View>
       </View>
     );
   }
@@ -64,18 +58,5 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '500',
     color: 'black'
-  },
-  button: {
-    alignItems: 'center',
-    borderColor: '#321911',
-    width: 90,
-    paddingVertical: 10,
-    backgroundColor: '#d7ccc8',
-    marginBottom: 10,
-  },
-  buttonText: {
-    color: '#321911',
-    fontSize: 20,
-    fontWeight: '500',
   }
 });
