@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   StatusBar,
-  View,
   Text,
+  ScrollView,
 } from 'react-native';
 
 import Card from '../Card';
@@ -32,16 +32,15 @@ export default class Sabah extends Component<Props> {
   }
 
   render() {
-    console.log('here is the data', this.state);
     return (
-      <View>
+      <ScrollView>
         <StatusBar
           backgroundColor='#321911'
           barStyle='light-content'
         />
         <Text style={styles.header}>أذكار الصباح</Text>
         {this.renderAthkar()}
-      </View>
+      </ScrollView>
     );
   }
 }
