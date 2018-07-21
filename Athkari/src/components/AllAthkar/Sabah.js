@@ -5,13 +5,20 @@ import {
   Text,
   ScrollView,
 } from 'react-native';
-
+import { createStackNavigator } from 'react-navigation';
 import Card from '../Card';
 
 const data = require('../../../data/Sabah.json');
 
 type Props = {};
 export default class Sabah extends Component<Props> {
+  static navigationOptions = {
+    title: 'أذكار الصباح                                      عودة',
+    headerStyle: {
+      backgroundColor: '#8c7b75',
+    },
+    headerTintColor: 'black',
+  }
   state = { myData: [] };
 
   componentWillMount() {
@@ -22,26 +29,25 @@ export default class Sabah extends Component<Props> {
     return this.state.myData.map(
       thikr =>
       <Card>
-          <Text key={thikr.id} style={styles.text}>
-            {thikr.title}
-            {'\n'}{'\n'}
-            ({thikr.times})
-          </Text>
+      <Text key={thikr.id} style={styles.text}>
+      {thikr.title}
+      {'\n'}{'\n'}
+      ({thikr.times})
+      </Text>
       </Card>
-    );
+      );
   }
 
   render() {
     return (
       <ScrollView>
-        <StatusBar
-          backgroundColor='#321911'
-          barStyle='light-content'
-        />
-        <Text style={styles.header}>أذكار الصباح</Text>
-        {this.renderAthkar()}
+      <StatusBar
+      backgroundColor='#321911'
+      barStyle='light-content'
+      />
+      {this.renderAthkar()}
       </ScrollView>
-    );
+      );
   }
 }
 
