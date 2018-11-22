@@ -22,7 +22,7 @@ export default class Massa extends Component<Props> {
     return this.state.myData.map(
       thikr =>
       <Card>
-          <Text key={thikr.id} style={styles.text}>
+          <Text style={styles.text}>
             {thikr.title}
             {'\n'}{'\n'}
             ({thikr.times})
@@ -35,7 +35,7 @@ export default class Massa extends Component<Props> {
     return (
       <ScrollView>
         <StatusBar
-          backgroundColor='#321911'
+          backgroundColor='#032734'
           barStyle='light-content'
         />
       <Text style={styles.header}>أذكار المساء</Text>
