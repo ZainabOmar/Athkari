@@ -11,7 +11,7 @@ export default class Logo extends Component<> {
   render() {
     return (
       <View style={styles.container}>
-      <Image source={logo} style={{ width: 130, height: 130 }} />
+      <Image source={logo} style={{ width: 150, height: 150 }} />
       </View>
     );
   }
