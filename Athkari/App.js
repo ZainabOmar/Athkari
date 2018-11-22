@@ -9,18 +9,22 @@ import {
 } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
-// import Header from './src/components/Header';
+import { Fonts } from './src/utils/Fonts';
+import Header from './src/components/Header';
 import Logo from './src/components/Logo';
 import Sabah from './src/components/AllAthkar/Sabah';
 import Masaa from './src/components/AllAthkar/Masaa';
-import Others from './src/components/AllAthkar/Others';
+import Other from './src/components/AllAthkar/Other';
 
 type Props = {};
 class HomeScreen extends Component<Props> {
   static navigationOptions = {
     title: 'الصفحة الرئيسية',
+    headerTitleStyle: {
+      marginLeft: 135,
+    },
     headerStyle: {
-      backgroundColor: '#8c7b75',
+      backgroundColor: '#0c84af',
     },
     headerTintColor: 'black',
   }
@@ -28,10 +32,11 @@ class HomeScreen extends Component<Props> {
     return (
       <View style={styles.container}>
       <StatusBar
-      backgroundColor='#321911'
+      backgroundColor='#032734'
       barStyle='light-content'
       />
       <Logo />
+      <Header />
       <TouchableOpacity
       onPress={() => this.props.navigation.navigate('Sabah')}
       style={styles.button}>
@@ -43,7 +48,7 @@ class HomeScreen extends Component<Props> {
       <Text style={styles.buttonText}> أذكار المساء </Text>
       </TouchableOpacity>
       <TouchableOpacity 
-      onPress={() => this.props.navigation.navigate('Others')}
+      onPress={() => this.props.navigation.navigate('Other')}
       style={styles.button}>
       <Text style={styles.buttonText}> أخرى </Text>
       </TouchableOpacity>
@@ -57,7 +62,7 @@ const RootStack = createStackNavigator(
   Home: HomeScreen,
   Masaa: Masaa,
   Sabah: Sabah,
-  Others: Others,
+  Other: Other,
 },
 {
   initialRouteName: 'Home',
@@ -66,20 +71,21 @@ const RootStack = createStackNavigator(
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#d7ccc8',
+    backgroundColor: '#85c1d7',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   button: {
     borderRadius: 20,
     borderWidth: 5,
-    borderColor: '#321911',
+    borderColor: '#064257',
     width: 200,
     paddingVertical: 13,
-    backgroundColor: '#d7ccc8',
+    backgroundColor: '#9dcddf',
     marginBottom: 20,
   },
   buttonText: {
-    color: '#321911',
+    color: '#064257',
     fontSize: 30,
     textAlign: 'center',
     fontWeight: '500',
