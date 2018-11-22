@@ -13,9 +13,9 @@ const data = require('../../../data/Sabah.json');
 type Props = {};
 export default class Sabah extends Component<Props> {
   static navigationOptions = {
-    title: 'أذكار الصباح                                      عودة',
+    title: 'عودة',
     headerStyle: {
-      backgroundColor: '#8c7b75',
+      backgroundColor: '#968e8c',
     },
     headerTintColor: 'black',
   }
@@ -26,10 +26,11 @@ export default class Sabah extends Component<Props> {
   }
 
   renderAthkar() {
+    console.log(this.state.myData);
     return this.state.myData.map(
       thikr =>
       <Card>
-      <Text key={thikr.id} style={styles.text}>
+      <Text style={styles.text}>
       {thikr.title}
       {'\n'}{'\n'}
       ({thikr.times})
@@ -42,9 +43,10 @@ export default class Sabah extends Component<Props> {
     return (
       <ScrollView>
       <StatusBar
-      backgroundColor='#321911'
+      backgroundColor='#032734'
       barStyle='light-content'
       />
+      <Text style={styles.header}>أذكار الصباح</Text>
       {this.renderAthkar()}
       </ScrollView>
       );
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 30,
     fontWeight: '500',
-    backgroundColor: '#8c7b75',
+    backgroundColor: '#968e8c',
     padding: 15,
     color: 'black',
     textAlign: 'center'
